@@ -45,5 +45,10 @@ public class ApiStepDefs {
 
     }
 
+    @Then("the information about current user from api and database should match")
+    public void the_information_about_current_user_from_api_and_database_should_match() {
+
+    }
+
 
 }
