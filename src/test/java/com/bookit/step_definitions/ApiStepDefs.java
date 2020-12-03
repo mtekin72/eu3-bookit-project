@@ -33,8 +33,7 @@ public class ApiStepDefs {
         //send get request to retrieve current user information
         String url = ConfigurationReader.get("qa2api.uri")+"/api/users/me";
 
-       response=     given()
-                                     .accept(ContentType.JSON)
+       response=     given().accept(ContentType.JSON)
                                      .and()
                                      .header("Authorization",token)
                                .when()
@@ -78,6 +77,16 @@ public class ApiStepDefs {
         Assert.assertEquals(expectedFirstName,actualFirstName);
         Assert.assertEquals(expectedLastName,actualLastName);
         Assert.assertEquals(expectedRole,actualRole);
+
+
+
+
+    }
+
+    @Then("UI,API and Database user information must be match")
+    public void ui_API_and_Database_user_information_must_be_match() {
+
+
 
     }
 
